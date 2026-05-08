@@ -927,6 +927,24 @@ ul {
   font-size: var(--fs-sm);
 }
 
+.footer__legal {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  opacity: 0.7;
+}
+
+.footer__legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__legal a:hover {
+  opacity: 1;
+}
+
 /* ===== Animations ===== */
 .fade-in {
   opacity: 0;
