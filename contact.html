@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Five Feet Digital</title>
+  <meta name="description" content="Get in touch with Five Feet Digital. We'd love to hear about your project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-page {
+      padding: 6rem 0 4rem;
+      min-height: 100vh;
+    }
+    .contact-page__header {
+      margin-bottom: 3rem;
+    }
+    .contact-page__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .contact-page__grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    .contact-page__info h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-page__info-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .contact-page__info-icon {
+      flex-shrink: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      background: var(--color-surface, #f3f4f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary, #6366f1);
+    }
+    .contact-page__info-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .contact-page__info-item p,
+    .contact-page__info-item a {
+      color: var(--color-text-muted, #6b7280);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+    .contact-page__info-item a:hover {
+      color: var(--color-primary, #6366f1);
+    }
+    .contact-page__company {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border, #e5e7eb);
+    }
+    .contact-page__company h3 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted, #6b7280);
+      margin-bottom: 0.75rem;
+    }
+    .contact-page__company address {
+      font-style: normal;
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--color-text-muted, #6b7280);
+    }
+    .contact-page__company address strong {
+      color: var(--color-text, #111827);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 2rem;
+      font-size: var(--fs-sm);
+      color: var(--color-primary, #6366f1);
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">Five Feet Digital</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html#services" class="nav__link">Services</a></li>
+          <li><a href="index.html#about" class="nav__link">About</a></li>
+          <li><a href="index.html#process" class="nav__link">Process</a></li>
+          <li><a href="index.html#work" class="nav__link">Work</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary nav__cta">Get Started</a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <div class="container">
+      <a href="index.html" class="back-link">&#8592; Back to Home</a>
+      <div class="contact-page__header">
+        <span class="section__tag">Contact</span>
+        <h1 class="section__title">Get In Touch</h1>
+        <p class="section__subtitle" style="max-width: 520px;">Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.</p>
+      </div>
+
+      <div class="contact-page__grid">
+        <!-- Contact Form -->
+        <form class="contact__form" id="contact-form" action="#" method="POST">
+          <div class="form__group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form__group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form__group">
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+60 12 345 6789">
+          </div>
+          <div class="form__group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" style="width:100%; padding: 0.75rem 1rem; border: 1px solid var(--color-border, #e5e7eb); border-radius: 0.5rem; font-size: 1rem; font-family: inherit; background: #fff; color: inherit;">
+              <option value="">Select a service...</option>
+              <option value="web-design">Web Design</option>
+              <option value="seo">Search Engine Optimisation (SEO)</option>
+              <option value="digital-marketing">Digital Marketing</option>
+              <option value="social-media">Social Media Management</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--accent btn--full">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-page__info">
+          <h2>Contact Information</h2>
+
+          <div class="contact-page__info-item">
+            <div class="contact-page__info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:hello@fivefeetdigital.com">hello@fivefeetdigital.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-page__info-item">
+            <div class="contact-page__info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+60122917148">+60122917148</a></p>
+            </div>
+          </div>
+
+          <div class="contact-page__info-item">
+            <div class="contact-page__info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Response Time</strong>
+              <p>We reply within 24 hours on business days.</p>
+            </div>
+          </div>
+
+          <div class="contact-page__company">
+            <h3>Registered Company</h3>
+            <address>
+              <strong>FIVE FEET DIGITAL SDN. BHD.</strong>
+              (20230103785 / 1531308-T)<br>
+              B5-11-3, MAISSON RESIDENCE,<br>
+              JALAN PJU 1A/3, ARA DAMANSARA,<br>
+              PETALING JAYA, SELANGOR 47301<br>
+              Malaysia
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__bottom container">
+      <p>&copy; 2026 FIVE FEET DIGITAL SDN. BHD. (20230103785 / 1531308-T). All rights reserved.</p>
+      <p>B5-11-3, MAISSON RESIDENCE, JALAN PJU 1A/3, ARA DAMANSARA, PETALING JAYA, SELANGOR 47301 Malaysia</p>
+      <p class="footer__legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
