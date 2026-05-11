@@ -38,8 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Sticky Header =====
   const header = document.getElementById('header');
 
+  const hasHero = document.querySelector('.hero');
+
   function handleScroll() {
-    header.classList.toggle('scrolled', window.scrollY > 50);
+    header.classList.toggle('scrolled', !hasHero || window.scrollY > 50);
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
